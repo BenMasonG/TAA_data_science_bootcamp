@@ -16,7 +16,7 @@ print('Your favourite meal is ' + starter + ' for your starter '
       ' for desesert with a glass of', drink + ' to wash it down.')
 
 
-#strech and challenge. Ask for bill and determine cost per person
+#stretch and challenge. Ask for bill and determine cost per person
 bill = float(input('How much is the bill please?'))
 number_of_diners = int(input('How many people are dinning?'))
 cost_per_person = round(bill/number_of_diners, 2)
