@@ -23,7 +23,7 @@ print('The bill will be £' + str(cost_per_person), 'per person')
 
 def favourite_meal(name, starter, main, dessert, drink):
     '''
-    Tell people what a person's favourite meal is.4
+    Tell people what a person's favourite meal is.
 
     :param name: string - the person's name.
     :param starter: string - their favourite starter.
