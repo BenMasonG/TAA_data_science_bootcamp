@@ -19,7 +19,7 @@ bill = float(input('How much is the bill please?'))
 number_of_diners = int(input('How many people are dinning?'))
 cost_per_person = round(bill/number_of_diners, 2)
 
-print('The bill will be £' + str(cost_per_person), 'per person')
+print('The bill will be £' + str(cost_per_person), 'per person.')
 
 def favourite_meal(name, starter, main, dessert, drink):
     '''
@@ -31,7 +31,7 @@ def favourite_meal(name, starter, main, dessert, drink):
     :param dessert: string - their favourite dessert.
     :param drink: main - their favourite drink.
 
-    return: string - a sentence stating the person's favourite meal.
+    print: string - a sentence stating the person's favourite meal.
     '''
 
     print ( name + '\'s', 'favourite meal is ' + starter + ' for their starter '
@@ -39,3 +39,18 @@ def favourite_meal(name, starter, main, dessert, drink):
       ' for their desesert with a glass of', drink + ' to wash it down.')
 
 favourite_meal(name, starter, main, dessert, drink)
+
+def total_per_person(bill, number_of_diners):
+    '''
+    This calculates the total cost each person needs to pay.
+
+    :param bill: float - the total cost of the bill.
+    :param number_of_diners - the number of diners.
+
+    print: string - the total cost per person.
+    '''
+
+    cost_per_person = round(bill/number_of_diners, 2)
+    print('The bill will be £' + str(cost_per_person), 'per person.')
+
+total_per_person(bill, number_of_diners)
