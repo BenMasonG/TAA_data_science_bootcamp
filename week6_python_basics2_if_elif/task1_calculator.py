@@ -41,12 +41,6 @@ def calculator(num1, num2, op):
         return f'{num1} % {num2} = {num1 % num2}'
     if (op != '*' or op != '/' or op != '+' or op != '-' or
         op != '**' or op != '//' or op != '%'):
-        raise TypeError('The third paramater must be a valid op')
+        raise TypeError('The third paramater must be a valid operator')
     else:
         raise Exception('Sorry, an unexpected error has occured. Please try again.')
-
-calculator(num1, num2, op)
-calculator(num1, num2, '-')
-calculator(num1, num2, '+')
-calculator(num1, num2, '/')
-calculator(num1, num2, '//')
