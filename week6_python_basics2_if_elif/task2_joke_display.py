@@ -5,12 +5,15 @@ def random_joke():
     is then told to the user based on what number the give. If the number is
     not between 1 and 100 an error message is shown to the user.
     '''
-    number =  input('What is your favourite number between 1 and 100?')
+    number = input('What is your favourite number between 1 and 100?')
     joke1 = 'I am a realy funny joke.'
     joke2 = 'I am an even funnier joke'
     joke3 ='I am the funniest joke of all.'
 
-    if int(number) > 100 or int(number) <= 0:
+    if number.isnumeric() is False:
+        raise ValueError('The number should be between 1 and 100.')
+    #This error will capture any negative numbers or non-numeric strings.
+    if int(number) > 100 or int(number) == 0:
         raise ValueError('The number should be between 1 and 100.')
     if int(number) >66:
         return joke1
