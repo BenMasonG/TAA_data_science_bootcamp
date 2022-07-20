@@ -16,7 +16,7 @@ def use_atm():
     print('Welcome to Northern Frock - Please select an option. \n1 - Displace Balance\
           \n2 - Withdraw Funds \n3 - Deposit funds \n9 - Return Card')
     
-    option = input('Please select an option')
+    option = input('Please select an option from the menu')
     max_withdrawl  = my_account.balance - (my_account.balance % 10)
     
     if option == '1':
@@ -26,10 +26,10 @@ def use_atm():
         else:
             print('Your maxium withdrawl amount is ' + str(max_withdrawl))
 
-    if option == '2':
+    elif option == '2':
         print('Please select an amount to withdraw. \n1 - £10 \n2 - £20 \n3 - £40\
             \n4 - £60 \n5 - £80 \n6 - £100 \n7 - Other amount \n8 - Return to main menu')
-        withdrawl_option = input('Please select an option')
+        withdrawl_option = input('Please select how much you would like to withdraw')
     
         if withdrawl_option == '1':
             if my_account.balance - 10 >= 0:
@@ -98,7 +98,7 @@ def use_atm():
         if withdrawl_option == '8':
             use_atm()
 
-    if option == '3':
+    elif option == '3':
         print('You have requested to deposit funds. if this is correct enter 1. Press any other key to return to the main menu')
         confirm = input('Would you like to despoit funds?')
 
@@ -110,7 +110,7 @@ def use_atm():
         else:
             use_atm()
 
-    if option == '9':
+    elif option == '9':
         return 'Here is your card. Have a good day.'
 
     else:
