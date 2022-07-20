@@ -10,7 +10,7 @@ def random_joke():
     joke2 = 'I am an even funnier joke'
     joke3 ='I am the funniest joke of all.'
 
-    if int(number) > 100 or int(number) < 0: 
+    if int(number) > 100 or int(number) <= 0:
         raise ValueError('The number should be between 1 and 100.')
     if int(number) >66:
         return joke1
