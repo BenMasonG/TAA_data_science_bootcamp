@@ -147,7 +147,8 @@ def use_atm(my_account):
                 use_atm(my_account)
 
         elif option == '3':
-            print('You have requested to deposit funds. if this is correct enter 1. Press any other key to return to the main menu')
+            print('You have requested to deposit funds. if this is correct enter 1.\
+                \nPress any other key to return to the main menu')
             confirm = input('Would you like to despoit funds?')
 
             if confirm == '1':
