@@ -1,7 +1,22 @@
 from time import sleep
+#This module has been imported so the sleep function can be used. The sleep function
+#has been used to create a small delay where necessary to ensure the correct message
+#is displayed to the user prior to input being requested.
 
 class BankAccount:
     '''
+    Create a BankAccount object with a name, account number, password and balance
+    attributes.
+    
+    Attributes:
+    name: str - the account holders name.
+    account_no: int - the bank accounts number
+    password: int - the password needed to access the account.
+    balance: int - the starting balance of the acccount. Defaults to 0 if no value
+    entered.
+    
+    Methods:
+    There are currently no methods attached to this class.
     '''
 
     def __init__(self, name, account_no, password, balance=0):
@@ -13,10 +28,17 @@ class BankAccount:
 bens_account = BankAccount('Ben', 1234, 1111, 10000)
 toms_account = BankAccount('Tom', 9876, 2222, 5005)
 
-print(bens_account.balance)
 
 def use_atm(my_account):
+    '''
+    This function mimics an atm. It requires a bank account class to be passed into it.
+    The user then can view the balance, withdraw funds or deposit funds into the account.
     
+    :param my_account: class - a BankAccount class object should be passed into this function.
+    :return: there is no explict return. The outcome of this function is dependant on what
+    input the user gives. Menus guide the options available.
+    '''
+
     print('Please enter your password.')
     password = int(input('Please enter your password'))
     if password != my_account.password:
@@ -25,6 +47,7 @@ def use_atm(my_account):
         print('Welcome to Northern Frock - Please select an option. \n1 - Displace Balance\
         \n2 - Withdraw Funds \n3 - Deposit funds \n9 - Return Card')
         sleep(0.5)
+        #this ensures the menu is printed to the console before input is requested.
     
         option = input('Please select an option from the menu')
         max_withdrawl  = my_account.balance - (my_account.balance % 10)
@@ -48,6 +71,8 @@ def use_atm(my_account):
                 elif my_account.balance - 10 < 0:
                     print('Sorry, there is not enough in your account to withdraw £10.')
                     sleep(1)
+                    #This ensures the user can read the message before being asked to reinput
+                    #their password.
                     use_atm(my_account)
 
             elif withdrawl_option == '2':
