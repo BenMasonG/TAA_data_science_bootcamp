@@ -53,4 +53,3 @@ def all_prices():
             print(f'{fruit}s cost {fruit_price[fruit]}.')
 
 all_prices()
-#
