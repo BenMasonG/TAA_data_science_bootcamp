@@ -1,8 +1,4 @@
-num1 = float(input('please select a number'))
-num2 = float(input('please select a number'))
-op = str(input('please select an operator'))
-
-def calculator(num1, num2, op):
+def calculator():
     '''
     This is a function that takes two numbers and then performs the requested
     calculation on them.
@@ -15,6 +11,10 @@ def calculator(num1, num2, op):
 
     This function is a basic calculator that takes two numbers and performs a calulation.
     '''
+
+    num1 = float(input('please select a number'))
+    num2 = float(input('please select a number'))
+    op = str(input('please select an operator'))
 
     #Only if statements used as if any statement is true an outcome will be returned
     #to the user. This will break the function so any use of elif would be supflerous.
@@ -45,4 +45,4 @@ def calculator(num1, num2, op):
     else:
         raise Exception('Sorry, an unexpected error has occured. Please try again.')
 
-calculator(num1, num2, op)
+calculator()

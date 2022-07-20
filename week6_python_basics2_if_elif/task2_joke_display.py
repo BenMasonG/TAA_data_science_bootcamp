@@ -23,5 +23,6 @@ def random_joke():
         return joke3
     else:
         raise Exception('Error. Please make sure you input a number between 1 and 100')
+    #included to capture any edge cases not captured by earlier logic.
 
 random_joke()
