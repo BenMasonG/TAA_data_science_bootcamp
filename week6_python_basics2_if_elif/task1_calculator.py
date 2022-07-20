@@ -44,3 +44,5 @@ def calculator(num1, num2, op):
         raise TypeError('The third paramater must be a valid operator')
     else:
         raise Exception('Sorry, an unexpected error has occured. Please try again.')
+
+calculator(num1, num2, op)
