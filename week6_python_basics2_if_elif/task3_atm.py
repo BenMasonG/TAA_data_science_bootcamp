@@ -8,11 +8,11 @@ class BankAccount:
         self.password = password
         self.balance = balance
 
-my_account = BankAccount('Ben', 1234, 1111, 10000)
+bens_account = BankAccount('Ben', 1234, 1111, 10000)
 
-print(my_account.balance)
+print(bens_account.balance)
 
-def use_atm():
+def use_atm(my_account):
     print('Welcome to Northern Frock - Please select an option. \n1 - Displace Balance\
           \n2 - Withdraw Funds \n3 - Deposit funds \n9 - Return Card')
     
@@ -37,7 +37,7 @@ def use_atm():
                 print('You have withdrawn £10, your new balance is £' + str(new_balance))
             elif my_account.balance - 10 < 0:
                 print('Sorry, there is not enough in your account to withdraw £10.')
-                use_atm()
+                use_atm(my_account)
 
         if withdrawl_option == '2':
             if my_account.balance - 20 >= 0:
@@ -45,7 +45,7 @@ def use_atm():
                 print('You have withdrawn £20, your new balance is £' + str(new_balance))
             elif my_account.balance - 20 < 0:
                 print('Sorry, there is not enough in your account to withdraw £20.')
-                use_atm()
+                use_atm(my_account)
 
         if withdrawl_option == '3':
             if my_account.balance - 40 >= 0:
@@ -53,7 +53,7 @@ def use_atm():
                 print('You have withdrawn £40, your new balance is £' + str(new_balance))
             elif my_account.balance - 40 < 0:
                 print('Sorry, there is not enough in your account to withdraw £40.')
-                use_atm()
+                use_atm(my_account)
 
         if withdrawl_option == '4':
             if my_account.balance - 60 >= 0:
@@ -61,7 +61,7 @@ def use_atm():
                 print('You have withdrawn £60, your new balance is £' + str(new_balance))
             elif my_account.balance - 60 < 0:
                 print('Sorry, there is not enough in your account to withdraw £60.')
-                use_atm()
+                use_atm(my_account)
 
         if withdrawl_option == '5':
             if my_account.balance - 80 >= 0:
@@ -69,7 +69,7 @@ def use_atm():
                 print('You have withdrawn £80, your new balance is £' + str(new_balance))
             elif my_account.balance - 80 < 0:
                 print('Sorry, there is not enough in your account to withdraw £80.')
-                use_atm()
+                use_atm(my_account)
 
         if withdrawl_option == '6':
             if my_account.balance - 100 >= 0:
@@ -77,14 +77,14 @@ def use_atm():
                 print('You have withdrawn £100, your new balance is £' + str(new_balance))
             elif my_account.balance - 100 < 0:
                 print('Sorry, there is not enough in your account to withdraw £100.')
-                use_atm()
+                use_atm(my_account)
 
         if withdrawl_option == '7':
             requested_withdrawl = int(input('How much would you like to withdraw? Must be a \
                 multiple of 10'))
             if requested_withdrawl % 10 != 0:
                 print('Invalid amount requested. Returning to main menu')
-                use_atm()
+                use_atm(my_account)
             elif requested_withdrawl % 10 == 0:
                 if my_account.balance - requested_withdrawl >= 0:
                     new_balance = my_account.balance - requested_withdrawl
@@ -93,10 +93,10 @@ def use_atm():
                 elif my_account.balance - requested_withdrawl < 0:
                     print('Sorry, there is not enough in your account to withdraw £' \
                         + str(requested_withdrawl))
-                    use_atm()
+                    use_atm(my_account)
 
         if withdrawl_option == '8':
-            use_atm()
+            use_atm(my_account)
 
     elif option == '3':
         print('You have requested to deposit funds. if this is correct enter 1. Press any other key to return to the main menu')
@@ -108,13 +108,13 @@ def use_atm():
             new_balance = deposit + my_account.balance
             print('Your new balance is £' + str(new_balance))
         else:
-            use_atm()
+            use_atm(my_account)
 
     elif option == '9':
         return 'Here is your card. Have a good day.'
 
     else:
         print('Please select a valid option.')
-        use_atm()
+        use_atm(my_account)
 
-use_atm()
+use_atm(bens_account)
