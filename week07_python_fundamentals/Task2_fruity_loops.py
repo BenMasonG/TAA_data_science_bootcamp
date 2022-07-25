@@ -1,5 +1,5 @@
 '''
-This module is for task 2 of the week 7 Home Learning Tasks. 
+This module is for task 2 of the week 7 Home Learning Tasks.
 '''
 def vowel_counter(fruit):
     '''
