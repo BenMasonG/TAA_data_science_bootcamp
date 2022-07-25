@@ -19,7 +19,7 @@ def vowel_counter(fruit):
     if count_vowels > 1:
         return f'There are {count_vowels} vowels in the word {fruit}'
     if count_vowels == 0:
-        return 'Wow, you found a fruit that has no vowels in its name!'
+        return f'There are {count_vowels} vowels in the word {fruit}'
 
 vowel_counter('Banana')
 vowel_counter('Orange')

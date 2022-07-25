@@ -39,7 +39,7 @@ class MotorBikes:
     the production value of the bike by 10% per year since the bike was produced.
     '''
 
-    total_motorbikes_create = 0
+    total_motorbikes_created = 0
 
     def __init__(self, name, make, model_year, model_type, production_value):
         self.name = name
@@ -47,7 +47,7 @@ class MotorBikes:
         self.model_year = model_year
         self.model_type = model_type
         self.production_value = production_value
-        MotorBikes.total_motorbikes_create += 1
+        MotorBikes.total_motorbikes_created += 1
 
     def current_value(self):
         '''
@@ -62,6 +62,9 @@ class MotorBikes:
 
         return f'The current value of {self.name} is £{round(current_value, 2)}'
 
-bens_bike = MotorBikes('Ben\'s Bike', 'Kawasaki', 2005 ,'Ninja 1000', 15000)
+bens_bike = MotorBikes('Ben\'s Bike', 'Kawasaki', 2018 ,'Ninja 1000', 33000)
+toms_bike = MotorBikes('Tom\'s Bike', 'Honda', 2007, 'CBR650R', 21000)
 
 bens_bike.current_value()
+toms_bike.current_value()
+print(MotorBikes.total_motorbikes_created)
