@@ -63,12 +63,15 @@ def gui_vowel_count():
         if letter.lower() in 'aeiou':
             count_vowels += 1
     if count_vowels == 1:
+        frm_entry.delete(0, tk.END)
         lbl_result['text'] = f'There is 1 vowel in the word {fruit}'
         return f'There is 1 vowel in the word {fruit}'
     if count_vowels > 1:
+        frm_entry.delete(0, tk.END)
         lbl_result['text'] = f'There are {count_vowels} vowels in the word {fruit}'
         return f'There are {count_vowels} vowels in the word {fruit}'
     if count_vowels == 0:
+        frm_entry.delete(0, tk.END)
         lbl_result['text'] = f'There are {count_vowels} vowels in the word {fruit}'
         return f'There are {count_vowels} vowels in the word {fruit}'
 
